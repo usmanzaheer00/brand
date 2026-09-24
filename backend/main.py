@@ -11,7 +11,11 @@ app = FastAPI(title="Atelier 09 API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "https://frontend-eta-ruby-68.vercel.app/",  # add your real Vercel URL once deployed
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
 )
