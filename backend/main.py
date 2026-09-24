@@ -9,15 +9,16 @@ from data import PRODUCTS, SIZE_GUIDE
 
 app = FastAPI(title="Atelier 09 API")
 
+from fastapi.middleware.cors import CORSMiddleware
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
         "https://frontend-eta-ruby-68.vercel.app",
-        "https://frontend-jzskgsecd-uz1.vercel.app",
-        "https://frontend-iud6r75pz-uz1.vercel.app",# add your real Vercel URL once deployed
     ],
+    allow_origin_regex=r"https://frontend.*\.vercel\.app",
     allow_methods=["*"],
     allow_headers=["*"],
 )
