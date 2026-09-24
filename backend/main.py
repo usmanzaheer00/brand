@@ -15,7 +15,8 @@ app.add_middleware(
         "http://localhost:5173",
         "http://127.0.0.1:5173",
         "https://frontend-eta-ruby-68.vercel.app",
-        "https://frontend-jzskgsecd-uz1.vercel.app",# add your real Vercel URL once deployed
+        "https://frontend-jzskgsecd-uz1.vercel.app",
+        "https://frontend-iud6r75pz-uz1.vercel.app",# add your real Vercel URL once deployed
     ],
     allow_methods=["*"],
     allow_headers=["*"],
