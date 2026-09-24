@@ -1,5 +1,7 @@
+const API_BASE = import.meta.env.VITE_API_URL || "";
+
 async function request(path, options) {
-  const res = await fetch(`/api${path}`, options);
+  const res = await fetch(`${API_BASE}/api${path}`, options);
   if (!res.ok) throw new Error(`Request failed: ${res.status}`);
   return res.json();
 }
